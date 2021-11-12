@@ -97,6 +97,7 @@ The idea here is to categorize the quotes as "negative", "neutral" or "positive"
 - Use regular expressions to get the number of times that "I", "we", "they", "them" were uttered.
 
 ## Timeline
+Tentative schedule subject to change, as the data science workflow is a non-linear, iterative process.
 
 ![](./gantt.png)
 
