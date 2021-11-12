@@ -81,7 +81,7 @@ In identifying political topics we will go with a hybrid approach:
 - Evaluate the average English level of a speaker in terms of the CEFR level associated with each word they use, using the CEFR level dataset.
 - Evaluate words based on their commonality in the English language.
 - It might also be interesting to count the number of unique words across the whole quotes uttered.
-- Find an appropriate dataset, we could try to measure the proportion of formal versus colloquial words.
+- If we can find an appropriate dataset, we could measure the proportion of formal versus colloquial words.
 
 #### Sentiment
 
