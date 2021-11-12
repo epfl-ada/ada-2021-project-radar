@@ -6,7 +6,6 @@
 
 We will evaluate this milestone according to how well these steps have been done and documented, the quality of the code and its documentation, the feasibility and critical awareness of the project. We will also evaluate this milestone according to how clear, reasonable and well thought-through the project idea is. Please use the second milestone to really check with us that everything is in order with your project (idea, feasibility, etc.) before you advance too much with the final Milestone 3! There will be project office hours dedicated to helping you.
 
-
 --- 
 
 # Trump vs Clinton: the 2016 Presidential election through their own words
