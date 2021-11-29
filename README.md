@@ -106,7 +106,7 @@ Tentative schedule subject to change, as the data science workflow is a non-line
 - **Auguste**: Language intellectuality, media bias analysis, organisation of codebase.
 - **Francis**: Project management, sentiment analysis, data visualisation and web integration.
 - **Dean**: Website setup, political topics analysis and data visualisation.
-- **Leonard**: Sentiment analysis, NLP.
+- **Leonard**: Sentiment analysis, natural language processing.
 
 ## Questions for TAs
 
