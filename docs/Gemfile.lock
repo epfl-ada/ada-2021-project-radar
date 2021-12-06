@@ -269,11 +269,11 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
+  x86_64-darwin-20
   x86_64-darwin-21
 
 DEPENDENCIES
-  github-pages (~> 219)
-  jekyll-feed (~> 0.12)
+  github-pages
   minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data

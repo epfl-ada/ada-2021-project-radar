@@ -28,7 +28,8 @@ baseurl: "/"
 url: "https://epfl-ada.github.io/ada-2021-project-radar/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
+# theme: minima
+remote_theme: "jeffreytse/jekyll-theme-yat"
 plugins:
   - jekyll-feed
 
