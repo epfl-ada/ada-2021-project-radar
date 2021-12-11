@@ -99,7 +99,7 @@ The idea here is to categorize the quotes as "negative", "neutral" or "positive"
 ## Timeline
 Tentative schedule subject to change, as the data science workflow is a non-linear, iterative process.
 
-![](./gantt.png)
+![](./assets/gantt.png)
 
 ## Organization
 
