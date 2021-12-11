@@ -16,3 +16,4 @@ dependencies:
   - transformers
   - pip:
     - syllables
+    - ddg3
