@@ -602,8 +602,10 @@ html {
     @include vertical-center(relative);
 
     color: $banner-text-color;
+    // -webkit-text-stroke: 1.5px black;
     padding: 10px 5px;
-    text-shadow: 1px 1px 2px #33333355;
+    // text-shadow: 1px 1px 2px #33333355;
+    text-shadow: 1px 1px 2px black;
 
     & > *:first-child {
       margin: 0;
