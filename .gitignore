@@ -6,8 +6,8 @@ data/*
 !data/.gitkeep
 .DS_Store
 docs/*
-
 */.DS_Store
+topics/.DS_Store
 
 ###########################
 ##### STANDARD IGNORES ####
