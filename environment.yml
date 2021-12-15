@@ -1,0 +1,19 @@
+name: ada
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - nb_conda_kernels
+  - ipykernel
+  - pandas
+  - beautifulsoup4
+  - ca-certificates
+  - certifi
+  - openssl
+  - statsmodels
+  - scikit-learn
+  - nltk
+  - transformers
+  - pip:
+    - syllables
+    - ddg3
