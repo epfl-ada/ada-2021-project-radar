@@ -4,6 +4,8 @@
 
 data/*
 !data/.gitkeep
+.DS_Store
+plots/*
 
 */.DS_Store
 
