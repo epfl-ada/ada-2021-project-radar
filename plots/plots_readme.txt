@@ -1,1 +1,0 @@
-this folder contains html plots generated with plotly in notebook.ipynb
