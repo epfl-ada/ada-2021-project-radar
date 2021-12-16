@@ -4,10 +4,8 @@
 
 data/*
 !data/.gitkeep
-.DS_Store
 docs/*
 */.DS_Store
-topics/.DS_Store
 
 ###########################
 ##### STANDARD IGNORES ####
@@ -18,7 +16,7 @@ topics/.DS_Store
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
-__pycache__/
+*__pycache__/
 *.py[cod]
 *$py.class
 
@@ -95,7 +93,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+*/.ipynb_checkpoints
 
 # IPython
 profile_default/
