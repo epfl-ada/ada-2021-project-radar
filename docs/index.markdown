@@ -99,14 +99,26 @@ Out of the table above all topics were detected by our LDA model (and more). Som
 
 Since most quotes are very short our model did a terrible job at assigning them to a topic, which is why we decided to opt for regular expressions instead which performed significantly better. Below we present a selection of some interesting topics as mentioned throughout 2016.
 
-
 <div>{%- include plots/ted__cruz.html -%}</div>
+
+Here we see how much emphasis Trump put on talking about (against) Ted Cruz, one of his major rivals and how the mentions of him die  down after Trump got  the nomination in early summer.
 
 <div>{%- include plots/ted_cruz_and_jfk_conspiracy.html -%}</div>
 
+A less obvious and quite weird topic extracted by our LDA model is that of  when Trump engaged in a conspiracy theory about  his fathers (wrongly) alleged involvement in the JFK assasination. Fantastic how the model extracted this.
+
 <div>{%- include plots/guns_and_shootings.html -%}</div>
 
+Guns and Shootings seem to have been a recurring topic for both candidates but seem to  have calmed down towards the end of the election campaign.
+
 <div>{%- include plots/fbi_probe_of_2016.html-%}</div>
+
+One of the most memorable scandals and topics was that surrounding  the email scandals of Clinton and the Russia Probe into Donald Trump.
+
+<div>{%- include plots/khan_speech_at_the_dnc.html -%}</div>
+
+Last but not least we present the scandal surrounding comment about the death of  a US soldier who happened to be a muslim. This topic seems to have passed quickly, so interesting, that the LDA catched it.
+
 
 
 ## Language
