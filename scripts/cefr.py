@@ -18,9 +18,9 @@ def bs_to_csv(soup, csv_writer):
         [[t.text for t in r.find_all("td")][:-1] for r in tr_rows]
     )
     
-CEFR_HTML = "cefr.html"
-CEFR_CSV_DIRTY = "cefr_dirty.csv"
-CEFR_CSV = "cefr.csv"
+CEFR_HTML = "../data/cefr.html"
+CEFR_CSV_DIRTY = "../data/cefr_dirty.csv"
+CEFR_CSV = "../data/cefr.csv"
 
 def scrape():
     # Scrape the HTML file and write in CSV format to file.
