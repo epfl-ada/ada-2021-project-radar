@@ -197,7 +197,7 @@ From our analysis, it seems like both Hillary Clinton and Donald Trump have take
 #### Immigration
 The immigration topic was one of the most controversial topics in the 2016 election. Donald Trump promised to build a wall and deport illegal immigrants, while Clinton pledged to protect and integrate some illegal immigrants.
 
-When analyzing the sentiment of quotes related to immigration, we see a clear difference between Donald Trump’s and Hillary Clinton’s sentiment: 60% of Hillary Clinton’s quotes related to immigration are positive, and only 22% are negative. In contrast, only 47% of Donald Trump’s quotes are positive, and 37% are negative. 
+When analyzing the sentiment of quotes related to immigration, we can notice a difference between Donald Trump’s and Hillary Clinton’s sentiment: 45% of Hillary Clinton’s quotes related to immigration are positive, and 38% are negative. In contrast, 38% of Donald Trump’s quotes are positive, and 47% are negative. 
 
 <div>{%- include plots/sentiment_class_immig.html -%}</div>
 
