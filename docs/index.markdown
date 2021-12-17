@@ -54,7 +54,7 @@ Though their ratings are informed by other things than public ratings, this shou
 | Right-center | 1.08   	|
 | Right    	| 1.97   	|
 
-*The confidence is $#Agree/#Disagree$
+*The confidence is #Agree / #Disagree
 
 About 39% of the outlets are classified as “Center”, 38% as “Left-center” or “Left”, and 23% as “Right-center” or “Right”. Also, perhaps expectedly, the ratings are less equivocal when the outlet is more extreme.
 ### Can we detect media bias?
