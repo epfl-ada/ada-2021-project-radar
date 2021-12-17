@@ -15,6 +15,7 @@ dependencies:
   - nltk
   - transformers
   - kaleido
+  - pyldavis
   - pip:
     - syllables
     - ddg3
