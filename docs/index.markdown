@@ -18,9 +18,8 @@ The dataset ranges from August 2008 to April 2020 with quotes extracted from mor
 
 This investigation only uses **quotes of the year of 2016**, where the predicted **speaker is either “Hillary Clinton” or  “Donald Trump”**. It is important to note that Quotebank ran into technical issues during the scraping of 2016 quotations which resulted in 3 periods with very few extracted quotes. For this analysis, any quote found inside of these periods was removed. After this and a few other (more trivial) filtrations, **140 000 quotes** remain to be used for the analysis. The dataset contains a disproportionately high share of Trump quotations. The distribution of quotes is presented in the two graphs below.
 
-[Placeh]()
-
-
+<div>{%- include plots/quotes_date_distributiion_plot.html -%}</div>
+<div>{%- include plots/pie_chart_unique.html -%}</div>
 
 
 ### Caveats
@@ -41,10 +40,9 @@ Bias: Does the bias of the news outlets correlate with our previous findings?
 ### What is the bias?
 Before diving into any analysis on Trump and Clinton’s speech, it is important to assess the bias in our dataset, which in our case is a list of quotes coming from various media outlets, potentially plagued with bias over two highly polarizing figures. Since our speakers are politicians, we should know if our quotes come from mostly left- or right-leaning outlets. The _AllSides_ news outlet presents news articles _in context_ --- by keeping note of the general political bias of news outlets. We will use their data in this part, which we obtained on [Kaggle](https://www.kaggle.com/supratimhaldar/allsides-ratings-of-bias-in-electronic-media).
 
-Our quotes come from nearly __5 200 different websites__, many of them blog sites and bogus websites that are only used for SEO.
-
-The AllSides database contains about __400 media outlets__, each with an assigned bias (“Left”, “Left-center”, “Right”...) and information on how many people agree with this rating. You can go rate the outlets yourself on their [website](https://www.allsides.com/media-bias/media-bias-ratings#ratings).
+Our quotes come from nearly __5 200 different websites__, while the AllSides database contains about __400 media outlets__, each with an assigned bias (“Left”, “Left-center”, “Right”...) and information on how many people agree with this rating. You can go rate the outlets yourself on their [website](https://www.allsides.com/media-bias/media-bias-ratings#ratings).
 Though their ratings are informed by other things than public ratings, this should still raise your eyebrow: it is likely that the only people giving ratings come from a certain political side, which would _bias_ our bias ratings, ironically.
+
 
 <div>{%- include plots/bias_distribution.html -%}</div>
 
@@ -77,30 +75,38 @@ We want to track the different political topics that the candidates focused on a
 
 1. Extracting and finding topics using Machine Learning (LDA).
 
-2. Specifying topics by building a regular expression (regex). Done both for topics suggested by the LDA model as well as for a known topic to extracting matching quotes.
+2. Specifying topics by building a regular expression (regex). Done both for topics suggested by the LDA model as well as for a known topic to extract matching quotes.
+
+
 ### Topics extracted by the LDA
-Several different LDA models were trained with the goal of finding topics which might  have been significant in 2016 during shorter periods of time but today are not well remembered. Due to the nature of the dataset this came with significant challenges since the entire data set as one big  piece of  text  was too large, but at the same time the individual documents (quotes) were too small. By grouping the quotes per day we created subdocuments for LDA to train on which yielded some  quite  interesting topics as listed in the table below, including the number of matching quotes.
+Several different LDA models were trained with the goal of finding topics which might  have been significant in 2016 during shorter periods of time but today are not well remembered. Due to the nature of the dataset this came with significant challenges since the entire data set as one big  piece of  text  was too large, but at the same time the individual documents (quotes) were too small. By grouping the quotes per day we created subdocuments for LDA to train on which yielded some pretty  interesting topics as listed in the table below, including the number of matching quotes.
 
 |Topic Title| # Matching Quotes |
 |    ---    |         ---       |
-|Obamacare                                        |  290|
-|Guns & Shootings                              | 1928|
-|FBI Probe of 2016                              |  376|
-|Russia                                                | 2105|
-|Khan Speech at the DNC                   |  342|
-|Ted Cruz and JFK Conspiracy            |   16|
-|Crooked Hillary                                   |  301|
-|Trump praises Saddam Hussein        |  147|
+|Ted  Cruz|  719|
+|Obamacare|  290|
+|Healthcare|  438|
+|Guns & Shootings| 1928|
+|FBI Probe of 2016|  376|
+|Russia| 2105|
+|Khan Speech at the DNC|  342|
+|Ted Cruz and JFK Conspiracy|   16|
+|Crooked Hillary|  301|
+|Trump praises Saddam Hussein|  147|
+|Abortion|  231|
 
-Out of the table above all topics were detected by our LDA model (and more). Some are about events many still remember, such as the FBI probe, which first reached the public in September of  2016. But some topics were a lot more short term and some of us in the team do not remember hearing about them before. An example of this is a short scandal which involved Trump “promoting” a conspiracy theory which  claimed that Ted Cruz’ (a rival republican candidate) father was involved in the JFK assasination. Another one is a scandal which involved Donald Trump commenting in negatively about a US soldier who got killed in combat and happened to have been a muslim. The parents held a speech at the Democratic National Congress (DNC), which got a lot of attention at the time but few remember in hindsight.
+Out of the table above all topics were detected by our LDA model (and more). Some are about events many still remember, such as the FBI probe, which first reached the public in September of  2016. But some topics were a lot more short term and some of us in the team do not remember hearing about them before. An example of this is a short scandal which involved Trump “promoting” a conspiracy theory which  claimed that the father of  Ted Cruz’ (a rival republican candidate) was involved in the JFK assasination. Another one is a scandal which involved Donald Trump commenting in negatively about a US soldier who got killed in combat and happened to have been a muslim. The parents held a speech at the Democratic National Congress (DNC), which got a lot of attention at the time but few remember in hindsight. 
+
+Since most quotes are very short our model did a terrible job at assigning them to a topic, which is why we decided to opt for regular expressions instead which performed significantly better. Below we present a selection of some interesting topics as mentioned throughout 2016.
 
 
-#### Obamacare or Healthcare?
-Health was a big topic of this election cycle, but the two candidates talked  about it in very different ways.
-Clinton got quoted talking about _Obamacare_ and the _Affordable Care Act_ whereas Trump Health related quotes 
-#### Russia and the FBI
+<div>{%- include plots/ted__cruz.html -%}</div>
 
-Note to myself: Russian attempts to interfere in the election were first disclosed publicly by members of the United States Congress in September 2016.
+<div>{%- include plots/ted_cruz_and_jfk_conspiracy.html -%}</div>
+
+<div>{%- include plots/guns_and_shootings.html -%}</div>
+
+<div>{%- include plots/fbi_probe_of_2016.html-%}</div>
 
 
 ## Language
@@ -252,18 +258,17 @@ Trump famously popularized the harsh phrase "Crooked Hillary" to denote the dish
 
 *Taken from Pennebaker, James W. The Secret Life of Pronouns. Bloomsbury Publishing.
 
-### Conclusion
+## Conclusion
 We studied the 2016 US presidential campaign of Hillary Clinton and Donald Trump through the quotes reported on the Internet.
 
 Throughout our analysis, we searched for clues that might indicate how both conducted their campaigns, based on who quoted them, what they talked about and how they talked.
 
 From the media bias side, we could not find a difference between how the two candidates were quoted, but our media bias dataset was perhaps not appropriate for a quotes dataset with such a variety of sources. In future work, we might try to impute the bias of all sources by comparing the quotes they report.
 
-From the topics side, 
+We found some very interesting topics from the LDA model we trained, some of which none of us remembered or had heard of. The regular expressions we built to extract quotes for some of the topics showed interesting patterns, such as Trump’s obsession with Ted Cruz, as well as more short term trends such as the DNC speech. Overall we are satisfied with the model performance but hope to find better ways to more scientifically classify quotes.
 
-From the language side, it is a mixed bag:
-It seems that both candidates are similar 
+From the language side, it is a mixed bag: it seems that both candidates are similar in terms of intellectuality, while in terms of pronouns, there are clear differences in usage between the two, for example Clinton uses “she” in positive sentences more often.
 
-… and this might have given him the edge and put him over the top.
+In sum, while it is difficult to draw strong conclusions from our analysis, we have extracted some interesting information from the quotes database. Trump spoke more on certain topics (including conspiracy theories), and this might have given him the edge and put him over the top.
 
 
