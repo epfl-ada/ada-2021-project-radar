@@ -282,5 +282,3 @@ We found some very interesting topics from the LDA model we trained, some of whi
 From the language side, it is a mixed bag: it seems that both candidates are similar in terms of intellectuality, while in terms of pronouns, there are clear differences in usage between the two, for example Clinton uses “she” in positive sentences more often.
 
 In sum, while it is difficult to draw strong conclusions from our analysis, we have extracted some interesting information from the quotes database. Trump spoke more on certain topics (including conspiracy theories), and this might have given him the edge and put him over the top.
-
-
