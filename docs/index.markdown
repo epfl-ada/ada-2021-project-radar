@@ -122,9 +122,6 @@ Last but not least we present the scandal surrounding comment about the death of
 ## Language
 How does the quoted language of Clinton and Trump differ?
 
-Intellectuality: Did they express different levels of intellectuality (more complicated words; more colloquial words)?
-Sentiment: Did they address certain topics or people more positively or negatively?
-Pronouns: How do the candidates use pronouns and what pronouns do they prefer?
 ### Intellectuality
 Jokes were often made that, despite his world-class education, candidate Trump would only use simple words during his campaign. Some surmised that this might be an attempt to appeal to a broader audience, the regular American Joe, while others considered that his vocabulary simply was not mature enough.
 
