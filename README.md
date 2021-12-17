@@ -32,25 +32,17 @@
 - It would help to find a dataset to match a URL to the news outlet name
 - Media bias data ([AllSides](https://www.kaggle.com/supratimhaldar/allsides-ratings-of-bias-in-electronic-media))
 
-### Political topics
 
-It would be interesting to use data which helps us understand what happens outside of the universe of Trump and Clinton quotes so that we can put the data in context.
+### Language
 
-- **Scraping Newspapers for political topics (CNN, Breitbart, Fox, etc)**
-  - Paywalls could be a problem but the article titles are usually open and include the topic. Otherwise we can use [Wayback Machine](https://archive.org/).
-  - Services such as Cloudflare could cause problems.
-- **Dataset of political topics of importance to citizens of the US.**
-  - Polling services such as Gallup, YouGov, Statista, Pew, etc. have plenty of historic data.
 - **Datasets for common English words**
   - English [adjectives](https://gist.github.com/hugsy/8910dc78d208e40de42deb29e62df913)
   - English [verbs](https://www.wordexample.com/list/most-common-verbs-english/)
   - NLTK stopwords
 
-### Language
-
 #### Intellectuality
 
-- [The EnglishProfile website](https://www.englishprofile.org/american-english) assigns each word in American English to a CEFR level (A1 to C2), so we scraped it with [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/) for the data we need; the cleaning is detailed in the notebook.
+- Using [The EnglishProfile website](https://www.englishprofile.org/american-english) we assigned each word in American English to a CEFR level (A1 to C2), so we scraped it with [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/) for the data we need; the cleaning is detailed in the notebook.
 
 ## Methods
 
@@ -60,15 +52,12 @@ It would be interesting to use data which helps us understand what happens outsi
 - Using the AllSides data, look at whether the difference in positivity score correlates with the bias of the outlet.
 - Consider for each quote, the average bias of the outlets which reported it.
 
-### Political issues
+### Political topics
 
-In identifying political topics we will go with a hybrid approach:
+In identifying political topics we went with a hybrid approach which was different from what we planned for, but the data did not allow something else (we know of):
 
-- **Extract quotes covering the most prominent topics (e.g. gun control, Obamacare, abortion...)**
-  - Obtain a list of topics (see for example [Pew 2016](https://www.pewresearch.org/politics/2016/07/07/4-top-voting-issues-in-2016-election/)) and use regular expressions to extract relevant quotes.
-- **Find less obvious topics or subtopics (e.g. scandals or shootings with short-lived media attention)**
-  - We can remove classes of words (stopwords, adjectives, verbs) and iteratively check the most frequent word after the filtering
-  - Use a more automatic method such as LDA, e.g. with [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html).
+- **Extract quotes using LDA**
+- **Assign topics to quotes using regular expressions**
 
 ### Language
 
@@ -82,10 +71,8 @@ In identifying political topics we will go with a hybrid approach:
 
 #### Sentiment
 
-The idea here is to categorize the quotes as "negative", "neutral" or "positive".
-
-- Use existing libraries such as [NLTK Pre-Trained Sentiment Analyzer](https://www.nltk.org/api/nltk.sentiment.html), as they usually are very efficient and will allow us to focus on the data analysis rather than the technical implementation of the algorithms.
-- Another approach is to use a pre-trained BERT NLP model to transform our quotations into high-dimensional token embedding vectors, on which we can then apply PCA and plot the two axes. This can be obtained through the [transformers](https://huggingface.co/transformers/) library.
+We categorized the quotes as "negative", "neutral" or "positive". 
+- Using existing libraries such as [NLTK Pre-Trained Sentiment Analyzer](https://www.nltk.org/api/nltk.sentiment.html), as they usually are very efficient and will allow us to focus on the data analysis rather than the technical implementation of the algorithms.
 
 - Perform sentiment analysis on the target of quotes using NLTK. For instance, Trump calling Clinton "Crooked Hillary" would be a negative statement about Presidential candidate Clinton.
 
@@ -94,7 +81,7 @@ The idea here is to categorize the quotes as "negative", "neutral" or "positive"
 - Use regular expressions to get the number of times that "I", "we", "they", "them" were uttered.
 
 ## Timeline
-Tentative schedule subject to change, as the data science workflow is a non-linear, iterative process.
+This was our schedule which we partly complied with, but as expected not everything went according to plan, but we reached our goals nonetheless.
 
 ![](./assets/gantt.png)
 
@@ -105,7 +92,3 @@ Tentative schedule subject to change, as the data science workflow is a non-line
 - **Dean**: Website setup, political topics analysis and data visualisation.
 - **Leonard**: Sentiment analysis, natural language processing.
 
-## Questions for TAs
-
-- Do we have enough research questions?
-- How scientific do we have to be in motivating our decisions? Example: Choosing a cutoff probability for which we discard quotes because we deem the prediction to be too bad.
