@@ -34,9 +34,7 @@ As a result of these caveats we encourage everyone to take this report for what 
 _An interesting (and fun) investigation into what conclusions **could** be drawn based on what the Internet quoted Hillary Clinton and Donald Trump with during the 2016 election year._
 
 ## Media bias
-Do media outlets portray Trump and Clinton differently?
-Coverage: Did the outlets report different quotes at a given point in time? For a given outlet, was the average valence of reported quotes the same for the two candidates?
-Bias: Does the bias of the news outlets correlate with our previous findings?
+
 ### What is the bias?
 Before diving into any analysis on Trump and Clinton’s speech, it is important to assess the bias in our dataset, which in our case is a list of quotes coming from various media outlets, potentially plagued with bias over two highly polarizing figures. Since our speakers are politicians, we should know if our quotes come from mostly left- or right-leaning outlets. The _AllSides_ news outlet presents news articles _in context_ --- by keeping note of the general political bias of news outlets. We will use their data in this part, which we obtained on [Kaggle](https://www.kaggle.com/supratimhaldar/allsides-ratings-of-bias-in-electronic-media).
 
